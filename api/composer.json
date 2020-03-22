@@ -10,13 +10,17 @@
         "symfony/console": "4.4.*",
         "symfony/dotenv": "4.4.*",
         "symfony/flex": "^1.1",
+        "symfony/form": "4.4.*",
         "symfony/framework-bundle": "4.4.*",
         "symfony/mercure-bundle": "^0.2",
-        "symfony/yaml": "4.4.*"
+        "symfony/yaml": "4.4.*",
+        "webonyx/graphql-php": "^0.13.8"
     },
     "require-dev": {
         "api-platform/schema-generator": "^2.1",
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "symfony/maker-bundle": "^1.11",
+        "symfony/phpunit-bridge": "^5.0",
         "symfony/profiler-pack": "^1.0"
     },
     "conflict": {
@@ -56,6 +60,10 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "lint:php": [
+            "php-cs-fixer fix ./src",
+            "php-cs-fixer fix ./tests"
         ]
     },
     "extra": {
